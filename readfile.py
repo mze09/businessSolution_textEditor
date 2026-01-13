@@ -7,16 +7,14 @@ root.geometry("300x150")
 
 def writeFile():
 	with open("demofile.txt", "w") as f:
-		f.write("this is what will be inside of the file!")
 		text = textbox.get("1.0")
-		print("You entered:")
-		print(text)
+		f.write(text)
+		
 
 def readFile():
 	with open("demofile.txt", "r") as f:
 		content = f.read()
 		print(content)
-		textbox.insert("1.0", content)
 
 textbox = Text(root, width=30, height=4)
 writebutton = Button(root, text="Write To File", command=writeFile)
