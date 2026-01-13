@@ -7,7 +7,7 @@ root.geometry("300x150")
 
 def writeFile():
 	with open("demofile.txt", "w") as f:
-		text = textbox.get("1.0")
+		text = textbox.get("1.0", "end")
 		f.write(text)
 		
 
